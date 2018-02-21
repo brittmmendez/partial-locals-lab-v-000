@@ -15,6 +15,10 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(student)
+    if student=''
+      @student=Student.all
+    else
+      @student=Student.find_by_name('rob').map {|s| s.name}
 
   end
 end
