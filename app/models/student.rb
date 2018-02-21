@@ -18,7 +18,8 @@ class Student < ActiveRecord::Base
     if student==''
       self.all
     else
-      where(['lower(name) LIKE ?', "%#{student}%"])
+      #where(['lower(name) LIKE ?', "%#{student}%"])
+      where(['lower(name) LIKE ?', student])
       
     end
 
