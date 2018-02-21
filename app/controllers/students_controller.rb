@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
   end
 
   def search
-    
+
   end
 
   def student_params
