@@ -19,6 +19,7 @@ class Student < ActiveRecord::Base
       @student=Student.all
     else
       @student=Student.find_by_name('rob').map {|s| s.name}
+    end
 
   end
 end
