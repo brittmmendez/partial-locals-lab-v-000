@@ -18,7 +18,7 @@ class Student < ActiveRecord::Base
     if student=''
       @student=Student.all
     else
-      @student=Student.find_by_name('rob').map {|s| s.name}
+      @student=Student.find_by_name("rob").map {|s| s.name}
     end
 
   end
