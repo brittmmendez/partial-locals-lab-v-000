@@ -18,8 +18,8 @@ class Student < ActiveRecord::Base
     if student==''
       self.all
     else
-      #where(['lower(name) LIKE ?', "%#{student}%"])
-      Student.search('student').select('name').map(&:name)
+      where(['lower(name) LIKE ?', "%#{student}%"])
+      
     end
 
   end
