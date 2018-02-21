@@ -20,7 +20,7 @@ class Student < ActiveRecord::Base
     else
       #where(['lower(name) LIKE ?', "%#{student}%"])
       where(['lower(name) LIKE ?', student])
-      
+
     end
 
   end
